@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dynasty Incremental</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1 class="Game__Name">Dynasty Incremental</h1>
+    <div class="navbar-controls">
+      <span class="coin-display">Coins: <span id="coinCount">0</span></span>
+      <button id="shopToggle">Shop</button>
+      <button id="rebirthToggle">Rebirth</button>
+      <button id="accessoriesToggle">Accessories</button>
+      <button id="giveIdeasBtn">Give Ideas</button>
+    </div>
+  </div>
+
+  <!-- Shop Dropdown -->
+  <div id="shopDropdown" class="dropdown">
+    <div class="shop-item">
+      <span>Coin Spawn Speed</span>
+      <button id="upgradeSpawnSpeed">Upgrade</button>
+    </div>
+    <div class="shop-item">
+      <span>Coin Value</span>
+      <button id="upgradeCoinValue">Upgrade</button>
+    </div>
+    <div class="shop-item">
+      <span>Coins Per Spawn</span>
+      <button id="upgradeCoinsPerSpawn">Upgrade</button>
+    </div>
+  </div>
+
+  <!-- Rebirth Dropdown -->
+  <div id="rebirthDropdown" class="dropdown">
+    <div class="shop-item">
+      <span>Rebirth</span>
+      <button id="doRebirth">Rebirth</button>
+    </div>
+    <div>Current Rebirths: <span id="rebirthCount">0</span></div>
+    <div>Cost: <span id="rebirthCost">100,000</span> Coins</div>
+  </div>
+
+  <!-- Accessories Dropdown -->
+  <div id="accessoriesDropdown" class="dropdown">
+    <div class="accessory-item">
+      <span>Top Hat</span>
+      <button class="buyAccessory" data-item="tophat" data-cost="500">Buy</button>
+    </div>
+    <div class="accessory-item">
+      <span>Sunglasses</span>
+      <button class="buyAccessory" data-item="sunglasses" data-cost="300">Buy</button>
+    </div>
+    <div class="accessory-item">
+      <span>Pants</span>
+      <button class="buyAccessory" data-item="pants" data-cost="400">Buy</button>
+    </div>
+    <div>Equipped: <span id="equippedAccessory">None</span></div>
+  </div>
+
+  <div class="game__holder" id="gameHolder">
+    <div class="Player__Character" id="player"></div>
+    <div class="Mobile__Controls">
+      <div class="JoyStick__Holder">
+        <div class="JoyStick" id="joystick"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
